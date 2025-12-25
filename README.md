@@ -20,7 +20,7 @@ KOYEB_TOKENS = [
   }
 ]
 
-// 可选：KV 绑定已在界面配置
+// 可选：KV 绑定已在界面配置，变量名LOG_KV
 
 ### 步骤 2: 配置 Worker 定时任务 (Cron Trigger)
 
