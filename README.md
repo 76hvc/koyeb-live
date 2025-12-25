@@ -2,11 +2,25 @@
 ### 步骤 1: 配置 Worker 环境变量
 
 在 Cloudflare Worker 的设置中，您需要配置以下环境变量：
+// 多账户配置（3个账户）
+KOYEB_TOKENS = [
+  {
+    "name": "个人博客",
+    "token": "koyeb_v1_your_token_123456",
+    "appUrl": "https://my-blog.koyeb.app"
+  },
+  {
+    "name": "在线商店",
+    "token": "koyeb_v1_another_token_789012",
+    "appUrl": "https://shop.koyeb.app"
+  },
+  {
+    "name": "测试环境",
+    "token": "koyeb_v1_test_token_345678"
+  }
+]
 
-| 变量名 | 描述 | 示例值 |
-| :--- | :--- | :--- |
-| **`TARGET_URL`** | 您在 Koyeb 部署的服务 URL。 | `https://koyebne-xxxxx.koyeb.app` |
-| **`AUTH_TOKEN`** | 用于 Worker 身份验证的密钥。**自行获取koyeb账户所提供的token** | `your-token` |
+// 可选：KV 绑定已在界面配置
 
 ### 步骤 2: 配置 Worker 定时任务 (Cron Trigger)
 
